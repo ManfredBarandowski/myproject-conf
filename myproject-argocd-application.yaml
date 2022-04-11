@@ -7,9 +7,11 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/ManfredBarandowski/myproject-app.git
+    repoURL: https://github.com/ManfredBarandowski/myproject-conf.git
     targetRevision: HEAD
-    path: app
+    path: .
+
+
   destination: 
     server: https://kubernetes.default.svc
     namespace: myproject
