@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myproject
+  namespace: myproject
+spec:
+  selector:
+    # Welche Pods sollen gemanaged werden ?
+    matchLabels:
+      app: myproject
+  template:
+    metadata:
+      labels:
+        app: myproject
+    spec:
+      containers:
+      - name: myproject
+        image: ghcr.io/manfredbarandowski/myproject-app:latest
+        ports:
+        - containerPort: 80
+        imagePullPolicy: Always
